@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date validations</title>
+    <script>
+        function validDate() {
+            var curdate = new Date();
+            var dob2 = new Date(document.myform.date1.value);
+            if (dob2 > curdate) {
+                alert("plz enter valid date ");
+                return false;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>date validations</h1>
+        <form name="myform" action="police.html" onsubmit=" return validDate()">
+            <label>Enter your date of birth</label>
+            <input type="date" name="date1" required>
+            <br>
+            <br>
+            <input type="submit" value="login">
+        </form>
+
+    </center>
+
+</body>
+
+</html>
